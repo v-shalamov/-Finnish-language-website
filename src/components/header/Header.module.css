@@ -1,0 +1,40 @@
+.navbar {
+  position: sticky;
+  top: 0px;
+  background-color: wheat;
+  padding: 15px;
+}
+
+.inputStyle {
+  /* Ваши стили для input */
+  /* Например: */
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+.navbar>a {
+  font-size: 130%;
+  margin-right: 27px;
+  text-decoration: none;
+  color: #716E66
+}
+
+.navbar>a:hover {
+  transition: color 0.5s ease;
+  color: white
+}
+
+.mobileMenu {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .mobileMenu {
+    display: block;
+  }
+
+  .desktopMenu {
+    display: none;
+  }
+
+}
