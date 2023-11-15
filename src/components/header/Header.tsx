@@ -1,47 +1,75 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import cn from 'classnames';
 import styles from './Header.module.css';
 
 const Header: FC = () => {
 
-  return (
-    <div>
-      {/*
-    <div>
-    <input type="text" className={styles.inputStyle} placeholder='title' name='title' > </input>
-    </div>
-  */}
-    <div className={styles.navbar}>
-      {/*
-      <input type="text" placeholder='title' name='title' > </input>
-    */}
-      <div className={cn(styles.navbar, styles.desktopMenu)}>
-        <NavLink to="/"></NavLink>
-        <NavLink to="">Фонетика</NavLink>
-        <NavLink to="">Спряжения слов</NavLink>
-        <NavLink to="Фонетика">Падежи</NavLink>
-        <NavLink to="Фонетика">Наклонения глаголов</NavLink>
-        <NavLink to="Фонетика">Времена</NavLink>
-        <NavLink to="Фонетика">Глагольные инфинетивы</NavLink>
-        <NavLink to="Фонетика">Причастия</NavLink>
-        <NavLink to="Фонетика">Малые части речи</NavLink>
-        <NavLink to="Фонетика">Пассив и лица</NavLink>
-        <NavLink to="Фонетика">Словарь</NavLink>
-        <NavLink to="Фонетика">Синтаксис</NavLink>
-        <NavLink to="Фонетика">Словообразование</NavLink>
-        <NavLink to="Фонетика">Суффиксы обладания</NavLink>
-        <NavLink to="Фонетика">Сравнительные степени</NavLink>
-        <NavLink to="Фонетика">Puhekieli</NavLink>
+  function showSquare() {
+    styles.display = 'block';
+    const [count, setCount] = useState(0);
+  }
+  
+  function hideSquare() {
+    document.getElementById('square').style.display = 'none';
+  }
 
+  return (
+    
+
+    <div className={cn(styles.navbar, styles.border, styles.FlexTotalHeader, styles.paddingForTheEntireHeader)}>
+      
+      
+
+      <div className={cn(styles.navbar, styles.desktopMenu, styles.flectionPicturesOfFinlandWithOtherElements)}>
+        <img src='https://cdn-icons-png.flaticon.com/128/10601/10601200.png' alt='картинка' className={styles.logophoto}></img>
+        <></>
+
+        <div>
+          
+          <div className={cn(styles.flectionOfTwoElements)}>
+            <input type="text" placeholder='Поиск статей о финском языке' name='title' className={cn(styles.searchLine, styles.searchLine)}/>
+
+            <div className={cn(styles.shiftElementsToTheRight)}>
+              <img src='https://cdn-icons-png.flaticon.com/128/565/565635.png' alt='картинка' className={cn(styles.translatorsPhoto, styles.SideElementIndentation)}></img>
+              <h4 className={cn(styles.LanguageNameIndentation)}>русский</h4>
+              <img src='https://cdn-icons-png.flaticon.com/128/2609/2609201.png' alt='картинка' className={cn(styles.ArrowToChangeLanguage, styles.LanguageNameIndentation)}></img>
+              <h4 className={cn(styles.SideElementIndentation)}>Log in</h4>
+              <img src='https://cdn-icons-png.flaticon.com/128/4254/4254068.png' alt='картинка' className={cn(styles.translatorsPhoto, styles.SideElementIndentation)}></img>
+            </div>
+
+          </div>
+
+          <div className={cn(styles.navbar)}>
+            <NavLink to="/"></NavLink>
+            <NavLink to="phonetics">Фонетика</NavLink>
+            <NavLink to="" className={styles.removingMarginFromTheFirstElement}>Падежи</NavLink>
+            <NavLink to="Фонетика" className={styles.removingMarginFromTheFirstElement}>Спряжения слов</NavLink>
+            <NavLink to="Фонетика" className={styles.removingMarginFromTheFirstElement}>Наклонения глаголов</NavLink>
+            <NavLink to="Фонетика" className={styles.removingMarginFromTheFirstElement}>Времена</NavLink>
+            <NavLink to="Фонетика" className={styles.removingMarginFromTheFirstElement}>Глагольные инфинетивы</NavLink>
+            <NavLink to="Фонетика" className={styles.removingMarginFromTheFirstElement}>Причастия</NavLink>
+            <NavLink to="Фонетика" className={styles.removingMarginFromTheFirstElement}>Малые части речи</NavLink>
+            <NavLink to="Фонетика" className={styles.removingMarginFromTheFirstElement}>Пассив и лица</NavLink>
+            <NavLink to="Фонетика" className={styles.removingMarginFromTheFirstElement}>Словарь</NavLink>
+            <NavLink to="Фонетика" className={styles.removingMarginFromTheFirstElement}>Синтаксис</NavLink>
+            <NavLink to="Фонетика" className={styles.removingMarginFromTheFirstElement}>Словообразование</NavLink>
+            <NavLink to="Фонетика" className={styles.removingMarginFromTheFirstElement}>Суффиксы обладания</NavLink>
+            <NavLink to="Фонетика" className={styles.removingMarginFromTheFirstElement}>Сравнительные степени</NavLink>
+            <NavLink to="Фонетика" className={styles.removingMarginFromTheFirstElement}>Puhekieli</NavLink>
+            <NavLink to="Фонетика" className={styles.removingMarginFromTheFirstElement}>Вводная часть в лингвистику</NavLink>
+          </div>
+        </div>
       </div>
       
       <div className={cn(styles.navbar, styles.mobileMenu)}>
         <NavLink to="catCard">☰</NavLink>
       </div>
     </div>
-    </div>
+    
   );
 };
 
 export default Header;
+
+// <div id="square"></div>

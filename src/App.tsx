@@ -6,6 +6,7 @@ import ProductItem from './components/productItem/ProductItem';
 import Error from './components/error/Error';
 import YoutubeExample from './components/youtubeExample/YoutubeExample';
 import PageHome from "./components/pageHome/PageHome";
+import Phonetics from "./components/phonetics/Phonetics";
 
 function App() {
   console.log('app!');
@@ -18,6 +19,7 @@ function App() {
         <Route path="/:id" element={<ProductItem />} />
   */}
         <Route index element={<PageHome />} />
+        <Route path="phonetics" element={<Phonetics />} />
         <Route path="*" element={<Error />} />
       </Route>
     </Routes>

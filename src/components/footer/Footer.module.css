@@ -1,5 +1,76 @@
 .footer {
-  background-color: rgb(161, 161, 161);
+  background-color: #EFEFEF;
   width: 100%;
-  padding: 10px;
+  height: 300px;
+  padding-top: 40px;
+}
+
+.centeringAllElements {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.kazmerPicture {
+  width: 70px;
+  height: 70px;
+}
+
+.stylesForInstagramAndMail {
+  width: 30px;
+  height: 30px;
+}
+
+.IndentationForElements {
+  margin-left: 77px;
+}
+
+.flexing {
+  display: flex;
+}
+
+.indentation {
+  margin-left: 8px;
+}
+
+.decreasingTheMarginFortheTextOfTheThirdElement {
+  margin-bottom: 0px;
+}
+
+.marginForTheLastTextOfTheFirstElement {
+  margin-left: 18px;
+  margin-top: 0px;
+}
+
+.marginForThirdElement {
+  margin-right: 53px;
+}
+
+.marginForTheTextOfTheSecondAndThirdElement {
+  margin-top: 32px;
+}
+
+.marginForThePhotoOfTheSecondElement {
+  margin-top: 22px;
+}
+
+.secondPhotoOfTheThirdElement {
+  width: 46px;
+  height: 46px;
+  margin-bottom: 13px;
+}
+
+.ThirdPhotoOfTheThirdElement {
+  width: 80px;
+  height: 80px;
+  margin-top: 0px;
+}
+
+.BeautifulText {
+  font-family: 'Times New Roman', sans-serif;
+}
+
+.logo {
+  text-decoration: none;
+  color: black;
 }

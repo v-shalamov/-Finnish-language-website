@@ -5,6 +5,7 @@ import App from "./App"
 import "./index.css"
 import { BrowserRouter } from 'react-router-dom'
 import { Provider } from "react-redux"
+import Articles from "./features/articles/Articles"
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   // обертка provider из redux - в store хранятся наши централизованные данные
@@ -12,6 +13,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
   <Provider store={store}>
     {/* эта обертка для роутинга, иначе он не заработает */}
     <BrowserRouter>
+      <Articles />
       <App />
     </BrowserRouter>
   </Provider>
